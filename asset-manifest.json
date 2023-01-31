@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/space/static/css/main.437c7761.css",
-    "main.js": "/space/static/js/main.530b26fc.js",
+    "main.js": "/space/static/js/main.22fce01a.js",
     "static/media/background-home-desktop.jpg": "/space/static/media/background-home-desktop.cdf3864ecbfdf20e8c3b.jpg",
     "static/media/image-moon.png": "/space/static/media/image-moon.d287d07182de3015952f.png",
     "static/media/background-destination-desktop.jpg": "/space/static/media/background-destination-desktop.468b922c69bf5499b4bc.jpg",
@@ -17,10 +17,10 @@
     "static/media/icon-close.svg": "/space/static/media/icon-close.d47fda63cbd8b3fedbbc1b2a53f64470.svg",
     "static/media/icon-hamburger.svg": "/space/static/media/icon-hamburger.5273efa7c50e96ef3e51e7a2b54048ce.svg",
     "main.437c7761.css.map": "/space/static/css/main.437c7761.css.map",
-    "main.530b26fc.js.map": "/space/static/js/main.530b26fc.js.map"
+    "main.22fce01a.js.map": "/space/static/js/main.22fce01a.js.map"
   },
   "entrypoints": [
     "static/css/main.437c7761.css",
-    "static/js/main.530b26fc.js"
+    "static/js/main.22fce01a.js"
   ]
 }
