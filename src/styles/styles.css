@@ -1,0 +1,324 @@
+.app__navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem;
+}
+.app__navbar__logo, .app__navbar__hamburger {
+  display: block;
+  cursor: pointer;
+}
+.app__navbar__menu {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(40.7742px);
+          backdrop-filter: blur(40.7742px);
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  color: white;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+.app__navbar .open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.app__navbar__close-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 36px 1.5rem;
+}
+.app__navbar__close-cont img {
+  width: 24px;
+}
+.app__navbar__list {
+  text-transform: uppercase;
+  padding-left: 2rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+}
+.app__navbar__list li {
+  padding: 1rem 0;
+  font-weight: 200;
+  cursor: pointer;
+}
+.app__navbar__list span {
+  font-weight: 700;
+}
+
+@media (min-width: 767px) {
+  .app__navbar {
+    padding: 0;
+  }
+  .app__navbar__logo-cont {
+    padding-left: 1.5rem;
+  }
+  .app__navbar__hamburger {
+    display: none;
+  }
+  .app__navbar__menu {
+    position: relative;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    width: auto;
+  }
+  .app__navbar__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .app__navbar__list li {
+    position: relative;
+    line-height: 6rem;
+    padding: 0 1rem;
+    font-weight: 300;
+  }
+  .app__navbar__list li:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+  }
+  .app__navbar__list span {
+    display: none;
+  }
+  .app__navbar__close-cont {
+    display: none;
+  }
+}
+@media (min-width: 1150px) {
+  .app__navbar {
+    padding-top: 1.5rem;
+  }
+  .app__navbar__logo-cont {
+    padding-left: 2rem;
+  }
+  .app__navbar__hamburger-cont {
+    width: 800px;
+    position: relative;
+  }
+  .app__navbar__hamburger-cont::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateX(-95%);
+            transform: translateX(-95%);
+    width: 70%;
+    height: 1px;
+    opacity: 0.2;
+    background-color: white;
+    z-index: 3;
+  }
+  .app__navbar__menu {
+    padding-left: 5rem;
+  }
+  .app__navbar__list li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+  }
+  .app__navbar__list span {
+    display: block;
+  }
+}
+@media (min-width: 1900px) {
+  .app__navbar__hamburger-cont {
+    width: 1050px;
+  }
+}
+.app__home {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.app__home__bg {
+  position: fixed;
+  min-height: 100vh;
+  inset: 0;
+  background-image: url("../assets/home/background-home-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.app__home__container {
+  width: 90%;
+}
+.app__home__introduction {
+  text-transform: uppercase;
+  color: #d0d6f9;
+  line-height: 19px;
+  letter-spacing: 0.2rem;
+}
+.app__home__head {
+  text-transform: uppercase;
+  color: white;
+  font-size: 5.5rem;
+  font-weight: 500;
+  font-family: "Bellefair", serif;
+}
+.app__home__info {
+  color: #d0d6f9;
+  font-weight: 200;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+.app__home__btn-cont {
+  margin-top: 3rem;
+}
+.app__home__btn {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  text-transform: uppercase;
+  font-family: "Bellefair", serif;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.app__home__btn:hover {
+  -webkit-box-shadow: 0 0 0 30px hsla(217deg, 16%, 45%, 0.3);
+          box-shadow: 0 0 0 30px hsla(217deg, 16%, 45%, 0.3);
+}
+
+@media (min-width: 767px) {
+  .app__home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: calc(100vh - 150px);
+  }
+  .app__home__bg {
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
+  .app__home__introduction {
+    font-size: 2rem;
+  }
+  .app__home__head {
+    font-size: 10rem;
+  }
+  .app__home__info {
+    width: 64%;
+    margin: 0 auto;
+  }
+  .app__home__btn {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media (min-width: 1150px) {
+  .app__home {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .app__home__bg {
+    background-image: url("../assets/home/background-home-desktop.jpg");
+  }
+  .app__home__container {
+    text-align: left;
+    width: 400px;
+  }
+  .app__home__info {
+    width: auto;
+  }
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,62 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import images from "../constants/images";
+const Navbar = () => {
+  const [menu, setMenu] = useState(false);
+
+  if (menu) {
+    document.querySelector("body").style.overflow = "hidden";
+  } else {
+    document.querySelector("body").style.overflow = "auto";
+  }
+
+  return (
+    <header className="app__navbar">
+      <div className="app__navbar__logo-cont">
+        <img className="app__navbar__logo" src={images.logo} alt="logo" />
+      </div>
+      <div className="app__navbar__hamburger-cont">
+        <img
+          onClick={() => setMenu(true)}
+          className="app__navbar__hamburger"
+          src={images.hamburger}
+          alt=""
+        />
+        <div className={`app__navbar__menu ${menu ? "open" : ""}`}>
+          <div className="app__navbar__close-cont">
+            <img
+              onClick={() => setMenu(false)}
+              className="app__navbar__close"
+              src={images.close}
+              alt=""
+            />
+          </div>
+          <ul onClick={() => setMenu(false)} className="app__navbar__list">
+            <Link to="/home">
+              <li>
+                <span>00</span> Home
+              </li>
+            </Link>
+            <Link to="/destination">
+              <li>
+                <span>01</span> Destination
+              </li>
+            </Link>
+            <Link to="/crew">
+              <li>
+                <span>02</span> Crew
+              </li>
+            </Link>
+            <Link to="/technology">
+              <li>
+                <span>03</span> Technology
+              </li>
+            </Link>
+          </ul>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Navbar;
