@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import images from "../constants/images";
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -32,26 +32,26 @@ const Navbar = () => {
             />
           </div>
           <ul onClick={() => setMenu(false)} className="app__navbar__list">
-            <Link to="/home">
+            <NavLink to="/home">
               <li>
                 <span>00</span> Home
               </li>
-            </Link>
-            <Link to="/destination">
+            </NavLink>
+            <NavLink to="/destination">
               <li>
                 <span>01</span> Destination
               </li>
-            </Link>
-            <Link to="/crew">
+            </NavLink>
+            <NavLink to="/crew">
               <li>
                 <span>02</span> Crew
               </li>
-            </Link>
-            <Link to="/technology">
+            </NavLink>
+            <NavLink to="/technology">
               <li>
                 <span>03</span> Technology
               </li>
-            </Link>
+            </NavLink>
           </ul>
         </div>
       </div>

@@ -2,17 +2,19 @@ import close from "../assets/shared/icon-close.svg";
 import hamburger from "../assets/shared/icon-hamburger.svg";
 import logo from "../assets/shared/logo.svg";
 
-import homebgmob from "../assets/home/background-home-mobile.jpg";
-import hombebgtab from "../assets/home/background-home-tablet.jpg";
-import homebgdes from "../assets/home/background-home-desktop.jpg";
+import moon from "../assets/destination/image-moon.png";
+import europa from "../assets/destination/image-europa.png";
+import mars from "../assets/destination/image-mars.png";
+import titan from "../assets/destination/image-titan.png";
 
 const images = {
   close,
   hamburger,
   logo,
-  homebgmob,
-  hombebgtab,
-  homebgdes,
+  moon,
+  europa,
+  mars,
+  titan,
 };
 
 export default images;
