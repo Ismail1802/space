@@ -351,6 +351,9 @@
   letter-spacing: 0.2rem;
   cursor: pointer;
 }
+.app__destination__list .activeplanet {
+  border-bottom: 2px solid white;
+}
 .app__destination__head {
   font-size: 4rem;
   font-weight: 400;
@@ -520,6 +523,232 @@
   .app__destination__img img {
     width: 500px;
     height: 500px;
+  }
+}
+.app__crew {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  padding: 0 1.5rem;
+}
+.app__crew__bg {
+  position: fixed;
+  min-height: 100vh;
+  inset: 0;
+  background-image: url("../assets/crew/background-crew-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.app__crew__cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.app__crew__head {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+.app__crew__head span {
+  margin-right: 0.5rem;
+  font-weight: 700;
+  opacity: 0.2;
+}
+.app__crew__meet {
+  width: 100%;
+  margin-top: 2rem;
+}
+.app__crew__meet img {
+  margin: 0 auto;
+  width: 177.12px;
+}
+.app__crew__meet hr {
+  width: 90%;
+  margin: 0 auto;
+  opacity: 0.1;
+}
+.app__crew__info, .app__crew__id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.app__crew__dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+.app__crew__dots .dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 0.5rem;
+  background-color: white;
+  opacity: 0.5;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.app__crew__dots .activedot {
+  opacity: 1;
+}
+.app__crew__person {
+  margin-top: 2rem;
+}
+.app__crew__rank {
+  text-transform: uppercase;
+  font-family: "Bellefair";
+  opacity: 0.5;
+}
+.app__crew__name {
+  text-transform: uppercase;
+  font-family: "Bellefair";
+  font-size: 1.5rem;
+}
+.app__crew__text {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #d0d6f9;
+}
+
+@media (min-width: 767px) {
+  .app__crew__bg {
+    background-image: url("../assets/crew/background-crew-tablet.jpg");
+  }
+  .app__crew__head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+  }
+  .app__crew__cont, .app__crew__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .app__crew__rank {
+    font-size: 1.5rem;
+  }
+  .app__crew__name {
+    font-size: 2.5rem;
+  }
+  .app__crew__text {
+    margin: 0 auto;
+    font-size: 1rem;
+    width: 50%;
+  }
+  .app__crew__dots {
+    margin-top: 3rem;
+  }
+  .app__crew__meet {
+    margin-top: 3rem;
+  }
+  .app__crew__meet img {
+    width: auto;
+  }
+}
+@media (min-width: 1150px) {
+  .app__crew {
+    height: calc(100vh - 120px);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .app__crew__bg {
+    background-image: url("../assets/crew/background-crew-desktop.jpg");
+  }
+  .app__crew__cont {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    width: 1440px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 4rem;
+    position: relative;
+  }
+  .app__crew__head-cont {
+    -webkit-transform: translateY(120px);
+            transform: translateY(120px);
+    width: 1440px;
+    padding: 0 4rem;
+  }
+  .app__crew__head {
+    font-size: 2rem;
+  }
+  .app__crew__rank {
+    font-size: 2rem;
+  }
+  .app__crew__name {
+    font-size: 2.5rem;
+  }
+  .app__crew__text {
+    font-weight: 300;
+    font-size: 1.5rem;
+    width: 90%;
+  }
+  .app__crew__info {
+    -webkit-box-flex: 0.4;
+        -ms-flex: 0.4;
+            flex: 0.4;
+  }
+  .app__crew__meet {
+    -webkit-box-flex: 0.4;
+        -ms-flex: 0.4;
+            flex: 0.4;
+    margin: 0;
+  }
+  .app__crew__meet img {
+    margin: 0;
+  }
+  .app__crew__meet hr {
+    display: none;
+  }
+  .app__crew__person {
+    text-align: left;
+    margin: 0;
+  }
+  .app__crew__text {
+    margin: 0;
+  }
+  .app__crew__dots {
+    margin-top: 7rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 *,

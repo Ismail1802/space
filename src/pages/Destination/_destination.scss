@@ -53,6 +53,9 @@
       letter-spacing: 0.2rem;
       cursor: pointer;
     }
+    .activeplanet {
+      border-bottom: 2px solid white;
+    }
   }
   &__head {
     font-size: 4rem;

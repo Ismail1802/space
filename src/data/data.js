@@ -51,7 +51,7 @@ const data = {
     {
       name: "Douglas Hurley",
       images: {
-        png: "./assets/crew/image-douglas-hurley.png",
+        png: images.douglas,
         webp: "./assets/crew/image-douglas-hurley.webp",
       },
       role: "Commander",
@@ -60,7 +60,7 @@ const data = {
     {
       name: "Mark Shuttleworth",
       images: {
-        png: "./assets/crew/image-mark-shuttleworth.png",
+        png: images.mark,
         webp: "./assets/crew/image-mark-shuttleworth.webp",
       },
       role: "Mission Specialist",
@@ -69,7 +69,7 @@ const data = {
     {
       name: "Victor Glover",
       images: {
-        png: "./assets/crew/image-victor-glover.png",
+        png: images.victor,
         webp: "./assets/crew/image-victor-glover.webp",
       },
       role: "Pilot",
@@ -78,7 +78,7 @@ const data = {
     {
       name: "Anousheh Ansari",
       images: {
-        png: "./assets/crew/image-anousheh-ansari.png",
+        png: images.ansari,
         webp: "./assets/crew/image-anousheh-ansari.webp",
       },
       role: "Flight Engineer",
