@@ -126,7 +126,7 @@
 
 @media (min-width: 1150px) {
   .app__crew {
-    height: calc(100vh - 120px);
+    height: calc(100vh - 152px);
     justify-content: space-between;
     &__bg {
       background-image: url("../assets/crew/background-crew-desktop.jpg");
@@ -140,7 +140,7 @@
       position: relative;
     }
     &__head-cont {
-      transform: translateY(120px);
+      transform: translateY(50px);
       width: 1440px;
       padding: 0 4rem;
     }
@@ -163,8 +163,10 @@
     }
     &__meet {
       flex: 0.4;
+
       margin: 0;
       img {
+        height: 600px;
         margin: 0;
       }
       hr {

@@ -115,6 +115,7 @@
 @media (min-width: 1150px) {
   .app__navbar {
     padding-top: 1.5rem;
+    margin-bottom: 2rem;
   }
   .app__navbar__logo-cont {
     padding-left: 2rem;
@@ -677,7 +678,7 @@
 }
 @media (min-width: 1150px) {
   .app__crew {
-    height: calc(100vh - 120px);
+    height: calc(100vh - 152px);
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -701,8 +702,8 @@
     position: relative;
   }
   .app__crew__head-cont {
-    -webkit-transform: translateY(120px);
-            transform: translateY(120px);
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
     width: 1440px;
     padding: 0 4rem;
   }
@@ -732,6 +733,7 @@
     margin: 0;
   }
   .app__crew__meet img {
+    height: 600px;
     margin: 0;
   }
   .app__crew__meet hr {
