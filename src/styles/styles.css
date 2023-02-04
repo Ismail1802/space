@@ -733,7 +733,6 @@
     margin: 0;
   }
   .app__crew__meet img {
-    height: 600px;
     margin: 0;
   }
   .app__crew__meet hr {
@@ -753,6 +752,99 @@
             justify-content: flex-start;
   }
 }
+.app__technology {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+.app__technology__bg {
+  position: fixed;
+  min-height: 100vh;
+  inset: 0;
+  background-image: url("../assets/technology/background-technology-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.app__technology__head {
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.app__technology__head span {
+  color: rgb(100, 100, 100);
+  font-weight: 700;
+}
+.app__technology__image-cont {
+  margin-top: 2rem;
+}
+.app__technology__image-cont img {
+  width: 375px;
+  height: 170px;
+}
+.app__technology__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  font-family: "Bellefair", serif;
+  margin: 2.1rem 0;
+}
+.app__technology__buttons .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+.app__technology .activebtn {
+  background-color: white;
+  font-weight: 600;
+  color: black;
+}
+.app__technology__termin {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  font-size: 1.1rem;
+  color: #d0d6f9;
+}
+.app__technology__proccess {
+  font-family: "Bellefair", serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.app__technology__text {
+  margin: 0 auto;
+  width: 90%;
+  font-weight: 200;
+  font-size: 1.2rem;
+  color: #d0d6f9;
+}
+
 *,
 *::before,
 *::after {

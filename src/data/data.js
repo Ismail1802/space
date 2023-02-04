@@ -89,7 +89,7 @@ const data = {
     {
       name: "Launch vehicle",
       images: {
-        portrait: "./assets/technology/image-launch-vehicle-portrait.jpg",
+        portrait: images.space,
         landscape: "./assets/technology/image-launch-vehicle-landscape.jpg",
       },
       description:
@@ -98,7 +98,7 @@ const data = {
     {
       name: "Spaceport",
       images: {
-        portrait: "./assets/technology/image-spaceport-portrait.jpg",
+        portrait: images.spaceport,
         landscape: "./assets/technology/image-spaceport-landscape.jpg",
       },
       description:
@@ -107,7 +107,7 @@ const data = {
     {
       name: "Space capsule",
       images: {
-        portrait: "./assets/technology/image-space-capsule-portrait.jpg",
+        portrait: images.capsule,
         landscape: "./assets/technology/image-space-capsule-landscape.jpg",
       },
       description:

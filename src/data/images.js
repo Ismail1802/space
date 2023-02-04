@@ -7,6 +7,11 @@ import douglas from "../assets/crew/image-douglas-hurley.png";
 import mark from "../assets/crew/image-mark-shuttleworth.png";
 import victor from "../assets/crew/image-victor-glover.png";
 import ansari from "../assets/crew/image-anousheh-ansari.png";
+
+import space from "../assets/technology/image-launch-vehicle-landscape.jpg";
+import capsule from "../assets/technology/image-space-capsule-landscape.jpg";
+import spaceport from "../assets/technology/image-spaceport-landscape.jpg";
+
 const images = {
   crew,
   moon,
@@ -17,6 +22,9 @@ const images = {
   mark,
   victor,
   ansari,
+  space,
+  capsule,
+  spaceport,
 };
 
 export default images;

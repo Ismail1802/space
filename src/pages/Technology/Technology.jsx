@@ -1,7 +1,53 @@
-import React from "react";
-
+import React, { useState } from "react";
+import data from "../../data/data";
 const Technology = () => {
-  return <div>Technology</div>;
+  const [portrait, setPortrait] = useState(0);
+  const tech = data.technology;
+
+  return (
+    <div className="app__technology">
+      <div className="app__technology__bg"></div>
+      {tech.map((item, index) => {
+        return portrait === index ? (
+          <React.Fragment key={index}>
+            <div className="app__technology__head-cont">
+              <p className="app__technology__head">
+                <span>03</span> Space Launch 101
+              </p>
+            </div>
+            <div className="app__technology__image-cont">
+              <img src={item.images.portrait} alt="" />
+            </div>
+            <div className="app__technology__cont">
+              <div className="app__technology__buttons">
+                <div
+                  className={`button ${0 === index ? "activebtn" : ""}`}
+                  onClick={() => setPortrait(0)}
+                >
+                  1
+                </div>
+                <div
+                  className={`button ${1 === index ? "activebtn" : ""}`}
+                  onClick={() => setPortrait(1)}
+                >
+                  2
+                </div>
+                <div
+                  className={`button ${2 === index ? "activebtn" : ""}`}
+                  onClick={() => setPortrait(2)}
+                >
+                  3
+                </div>
+              </div>
+              <p className="app__technology__termin">The terminology..</p>
+              <h1 className="app__technology__proccess">{item.name}</h1>
+              <p className="app__technology__text">{item.description}</p>
+            </div>
+          </React.Fragment>
+        ) : null;
+      })}
+    </div>
+  );
 };
 
 export default Technology;
