@@ -80,8 +80,7 @@
     &__head-cont {
       display: flex;
       justify-content: flex-start;
-      width: 100%;
-      padding-left: 3rem;
+      max-width: 1440px;
     }
     &__image-cont {
       width: 100%;
@@ -158,9 +157,6 @@
         width: 566px;
         height: 578px;
       }
-    }
-    &__head-cont {
-      padding-left: 18rem;
     }
   }
 }

@@ -857,8 +857,7 @@
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    width: 100%;
-    padding-left: 3rem;
+    max-width: 1440px;
   }
   .app__technology__image-cont {
     width: 100%;
@@ -955,9 +954,6 @@
   .app__technology__image-cont img {
     width: 566px;
     height: 578px;
-  }
-  .app__technology__head-cont {
-    padding-left: 18rem;
   }
 }
 *,
