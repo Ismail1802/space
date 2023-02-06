@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import data from "../../data/data";
-
+import { motion } from "framer-motion";
 const Crew = () => {
   const [astronaut, setAstronaut] = useState(0);
   const crew = data.crew;
 
   return (
-    <div className="app__crew">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="app__crew"
+    >
       <div className="app__crew__bg"></div>
       <div className="app__crew__head-cont">
         <p className="app__crew__head">
@@ -54,7 +59,7 @@ const Crew = () => {
           </React.Fragment>
         ) : null;
       })}
-    </div>
+    </motion.div>
   );
 };
 

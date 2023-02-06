@@ -169,6 +169,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 1440px;
 }
 .app__home__bg {
   position: fixed;
@@ -261,6 +262,7 @@
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    margin: 0 auto;
   }
   .app__home__bg {
     background-image: url("../assets/home/background-home-desktop.jpg");
@@ -271,6 +273,13 @@
   }
   .app__home__info {
     width: auto;
+  }
+}
+@media (min-width: 1650px) {
+  .app__home {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 .app__destination {
@@ -679,6 +688,7 @@
 @media (min-width: 1150px) {
   .app__crew {
     height: calc(100vh - 152px);
+    max-height: 1000px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -789,11 +799,12 @@
   font-weight: 700;
 }
 .app__technology__image-cont {
+  width: 100%;
   margin-top: 2rem;
 }
 .app__technology__image-cont img {
-  width: 375px;
-  height: 170px;
+  width: 100%;
+  height: auto;
 }
 .app__technology__buttons {
   display: -webkit-box;
@@ -851,20 +862,7 @@
     background-image: url("../assets/technology/background-technology-tablet.jpg");
   }
   .app__technology__head-cont {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    max-width: 1440px;
-  }
-  .app__technology__image-cont {
-    width: 100%;
-  }
-  .app__technology__image-cont img {
-    width: 768px;
-    height: 310px;
+    padding-top: 2rem;
   }
   .app__technology__text {
     width: 55%;
@@ -889,6 +887,13 @@
     cursor: pointer;
     font-size: 1.4rem;
   }
+  .app__technology__cont, .app__technology__head-cont {
+    padding-left: 5rem;
+  }
+  .app__technology__head-cont {
+    width: 1440px;
+    margin: 0 auto;
+  }
   .app__technology__cont {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -899,8 +904,9 @@
     -webkit-box-flex: 0.5;
         -ms-flex: 0.5;
             flex: 0.5;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .app__technology__image-cont {
     -webkit-box-flex: 0.3;
@@ -923,6 +929,7 @@
             flex-direction: column;
   }
   .app__technology__global-cont {
+    margin: 0 auto;
     max-width: 1440px;
     width: 1440px;
     display: -webkit-box;
@@ -947,9 +954,9 @@
 }
 @media (min-width: 1650px) {
   .app__technology {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .app__technology__image-cont img {
     width: 566px;

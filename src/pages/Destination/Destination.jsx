@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import data from "../../data/data";
-
+import { motion } from "framer-motion";
 const Destination = () => {
   const [planet, setPlanet] = useState("Moon");
   const destinations = data.destinations;
 
   return (
-    <div className="app__destination">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="app__destination"
+    >
       <div className="app__destination__bg"></div>
       {destinations.map((item, index) => {
         return item.name === planet ? (
@@ -71,7 +76,7 @@ const Destination = () => {
           </React.Fragment>
         ) : null;
       })}
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import data from "../../data/data";
+import { motion } from "framer-motion";
 const Technology = () => {
   const [portrait, setPortrait] = useState(0);
   const tech = data.technology;
 
   return (
-    <div className="app__technology">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="app__technology"
+    >
       <div className="app__technology__bg"></div>
       {tech.map((item, index) => {
         return portrait === index ? (
@@ -56,7 +62,7 @@ const Technology = () => {
           </React.Fragment>
         ) : null;
       })}
-    </div>
+    </motion.div>
   );
 };
 
