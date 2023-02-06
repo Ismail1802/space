@@ -6,12 +6,7 @@ const Technology = () => {
   const tech = data.technology;
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="app__technology"
-    >
+    <motion.div className="app__technology">
       <div className="app__technology__bg"></div>
       {tech.map((item, index) => {
         return portrait === index ? (
@@ -21,7 +16,11 @@ const Technology = () => {
                 <span>03</span> Space Launch 101
               </p>
             </div>
-            <div className="app__technology__global-cont">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { duration: 0.5 } }}
+              className="app__technology__global-cont"
+            >
               <div className="app__technology__image-cont">
                 <picture>
                   <source
@@ -58,7 +57,7 @@ const Technology = () => {
                   <p className="app__technology__text">{item.description}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </React.Fragment>
         ) : null;
       })}

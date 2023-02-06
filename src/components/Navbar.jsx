@@ -4,12 +4,6 @@ import images from "../constants/images";
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
-  if (menu) {
-    document.querySelector("body").style.overflow = "hidden";
-  } else {
-    document.querySelector("body").style.overflow = "auto";
-  }
-
   return (
     <header className="app__navbar">
       <div className="app__navbar__logo-cont">

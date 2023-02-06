@@ -6,12 +6,7 @@ const Crew = () => {
   const crew = data.crew;
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="app__crew"
-    >
+    <motion.div className="app__crew">
       <div className="app__crew__bg"></div>
       <div className="app__crew__head-cont">
         <p className="app__crew__head">
@@ -21,7 +16,11 @@ const Crew = () => {
       {crew.map((item, index) => {
         return index === astronaut ? (
           <React.Fragment key={index}>
-            <div className="app__crew__cont">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { duration: 0.5 } }}
+              className="app__crew__cont"
+            >
               <div className="app__crew__meet">
                 <img
                   className="app__crew__image"
@@ -55,7 +54,7 @@ const Crew = () => {
                   <p className="app__crew__text">{item.bio}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </React.Fragment>
         ) : null;
       })}

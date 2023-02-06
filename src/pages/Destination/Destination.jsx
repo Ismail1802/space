@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import data from "../../data/data";
 import { motion } from "framer-motion";
+
 const Destination = () => {
   const [planet, setPlanet] = useState("Moon");
   const destinations = data.destinations;
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="app__destination"
-    >
+    <motion.div className="app__destination">
       <div className="app__destination__bg"></div>
       {destinations.map((item, index) => {
         return item.name === planet ? (
           <React.Fragment key={index}>
-            <div className="app__destination__planet">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { duration: 0.5 } }}
+              className="app__destination__planet"
+            >
               <div className="app__destination__text-cont">
                 <p className="app__destination__planet-text">
                   <span>01</span> Pick your destination
@@ -25,8 +25,12 @@ const Destination = () => {
               <div className="app__destination__img">
                 <img src={item.images.png} alt="moon img" />
               </div>
-            </div>
-            <div className="app__destination__info">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { duration: 0.5 } }}
+              className="app__destination__info"
+            >
               <ul className="app__destination__list">
                 <li
                   onClick={() => setPlanet("Moon")}
@@ -72,7 +76,7 @@ const Destination = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </React.Fragment>
         ) : null;
       })}

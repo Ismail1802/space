@@ -1,15 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
+
 const Home = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="app__home"
-    >
+    <motion.div className="app__home">
       <div className="app__home__bg"></div>
-      <div className="app__home__container">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 0.5 } }}
+        className="app__home__container"
+      >
         <p className="app__home__introduction">So, you want to travel to</p>
         <h1 className="app__home__head">Space</h1>
         <p className="app__home__info">
@@ -18,10 +18,14 @@ const Home = () => {
           back, and relax because we’ll give you a truly out of this world
           experience!
         </p>
-      </div>
-      <div className="app__home__btn-cont">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 0.5 } }}
+        className="app__home__btn-cont"
+      >
         <button className="app__home__btn">Explore</button>
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
