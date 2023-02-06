@@ -682,6 +682,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    overflow: hidden;
   }
   .app__crew__bg {
     background-image: url("../assets/crew/background-crew-desktop.jpg");
@@ -702,8 +703,8 @@
     position: relative;
   }
   .app__crew__head-cont {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
     width: 1440px;
     padding: 0 4rem;
   }
@@ -845,6 +846,120 @@
   color: #d0d6f9;
 }
 
+@media (min-width: 767px) {
+  .app__technology__bg {
+    background-image: url("../assets/technology/background-technology-tablet.jpg");
+  }
+  .app__technology__head-cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+    padding-left: 3rem;
+  }
+  .app__technology__image-cont {
+    width: 100%;
+  }
+  .app__technology__image-cont img {
+    width: 768px;
+    height: 310px;
+  }
+  .app__technology__text {
+    width: 55%;
+  }
+}
+@media (min-width: 1150px) {
+  .app__technology {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    text-align: left;
+  }
+  .app__technology__bg {
+    background-image: url("../assets/technology/background-technology-desktop.jpg");
+  }
+  .app__technology__head {
+    font-size: 2rem;
+  }
+  .app__technology .button {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    font-size: 1.4rem;
+  }
+  .app__technology__cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .app__technology__image-cont {
+    -webkit-box-flex: 0.3;
+        -ms-flex: 0.3;
+            flex: 0.3;
+  }
+  .app__technology__image-cont img {
+    width: 515px;
+    height: 527px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .app__technology__text-cont {
+    width: 500px;
+  }
+  .app__technology__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .app__technology__global-cont {
+    max-width: 1440px;
+    width: 1440px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .app__technology__text {
+    width: 90%;
+    margin: 0;
+    font-size: 1.489rem;
+  }
+  .app__technology__proccess {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1650px) {
+  .app__technology {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .app__technology__image-cont img {
+    width: 566px;
+    height: 578px;
+  }
+  .app__technology__head-cont {
+    padding-left: 18rem;
+  }
+}
 *,
 *::before,
 *::after {

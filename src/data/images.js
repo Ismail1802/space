@@ -12,6 +12,10 @@ import space from "../assets/technology/image-launch-vehicle-landscape.jpg";
 import capsule from "../assets/technology/image-space-capsule-landscape.jpg";
 import spaceport from "../assets/technology/image-spaceport-landscape.jpg";
 
+import landscape1 from "../assets/technology/image-launch-vehicle-portrait.jpg";
+import landscape2 from "../assets/technology/image-space-capsule-portrait.jpg";
+import landscape3 from "../assets/technology/image-spaceport-portrait.jpg";
+
 const images = {
   crew,
   moon,
@@ -25,6 +29,9 @@ const images = {
   space,
   capsule,
   spaceport,
+  landscape1,
+  landscape2,
+  landscape3,
 };
 
 export default images;
