@@ -1,0 +1,142 @@
+.app__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  width: 100%;
+  &__logo,
+  &__hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  &__menu {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.7742px);
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    color: white;
+    transform: translateX(100%);
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+  }
+  .open {
+    transform: translateX(0);
+  }
+  &__close-cont {
+    display: flex;
+    justify-content: flex-end;
+    padding: 36px 1.5rem;
+    img {
+      width: 24px;
+    }
+  }
+  &__list {
+    text-transform: uppercase;
+    padding-left: 2rem;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+    li {
+      padding: 1rem 0;
+      font-weight: 200;
+      cursor: pointer;
+    }
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .app__navbar {
+    padding: 0;
+    &__logo-cont {
+      padding-left: 1.5rem;
+    }
+    &__hamburger {
+      display: none;
+    }
+    &__menu {
+      position: relative;
+      transform: translateX(0);
+      width: auto;
+    }
+    &__list {
+      display: flex;
+      align-items: center;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      a {
+        position: relative;
+      }
+      .active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+      }
+      li {
+        line-height: 6rem;
+        padding: 0 1rem;
+        font-weight: 300;
+      }
+
+      span {
+        display: none;
+      }
+    }
+    &__close-cont {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .app__navbar {
+    padding-top: 1.5rem;
+    margin-bottom: 2rem;
+    &__logo-cont {
+      padding-left: 2rem;
+    }
+    &__hamburger-cont {
+      width: 800px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateX(-95%);
+        width: 70%;
+        height: 1px;
+        opacity: 0.2;
+        background-color: white;
+        z-index: 3;
+      }
+    }
+    &__menu {
+      padding-left: 5rem;
+      // padding-right: 2rem;
+    }
+    &__list {
+      li {
+        display: flex;
+        gap: 1rem;
+      }
+      span {
+        display: block;
+      }
+    }
+  }
+}
+@media (min-width: 1900px) {
+  .app__navbar {
+    &__hamburger-cont {
+      width: 1050px;
+    }
+  }
+}

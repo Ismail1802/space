@@ -1,0 +1,1025 @@
+.app__navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.5rem;
+  width: 100%;
+}
+.app__navbar__logo,
+.app__navbar__hamburger {
+  display: block;
+  cursor: pointer;
+}
+.app__navbar__menu {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(40.7742px);
+  backdrop-filter: blur(40.7742px);
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  color: white;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+.app__navbar .open {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.app__navbar__close-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 36px 1.5rem;
+}
+.app__navbar__close-cont img {
+  width: 24px;
+}
+.app__navbar__list {
+  text-transform: uppercase;
+  padding-left: 2rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+}
+.app__navbar__list li {
+  padding: 1rem 0;
+  font-weight: 200;
+  cursor: pointer;
+}
+.app__navbar__list span {
+  font-weight: 700;
+}
+
+@media (min-width: 767px) {
+  .app__navbar {
+    padding: 0;
+  }
+  .app__navbar__logo-cont {
+    padding-left: 1.5rem;
+  }
+  .app__navbar__hamburger {
+    display: none;
+  }
+  .app__navbar__menu {
+    position: relative;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    width: auto;
+  }
+  .app__navbar__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .app__navbar__list a {
+    position: relative;
+  }
+  .app__navbar__list .active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+  }
+  .app__navbar__list li {
+    line-height: 6rem;
+    padding: 0 1rem;
+    font-weight: 300;
+  }
+  .app__navbar__list span {
+    display: none;
+  }
+  .app__navbar__close-cont {
+    display: none;
+  }
+}
+@media (min-width: 1150px) {
+  .app__navbar {
+    padding-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .app__navbar__logo-cont {
+    padding-left: 2rem;
+  }
+  .app__navbar__hamburger-cont {
+    width: 800px;
+    position: relative;
+  }
+  .app__navbar__hamburger-cont::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateX(-95%);
+    transform: translateX(-95%);
+    width: 70%;
+    height: 1px;
+    opacity: 0.2;
+    background-color: white;
+    z-index: 3;
+  }
+  .app__navbar__menu {
+    padding-left: 5rem;
+  }
+  .app__navbar__list li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+  }
+  .app__navbar__list span {
+    display: block;
+  }
+}
+@media (min-width: 1900px) {
+  .app__navbar__hamburger-cont {
+    width: 1050px;
+  }
+}
+.app__home {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 1440px;
+}
+.app__home__bg {
+  position: fixed;
+  min-height: 100vh;
+  inset: 0;
+  background-image: url("../assets/home/background-home-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.app__home__container {
+  width: 90%;
+}
+.app__home__introduction {
+  text-transform: uppercase;
+  color: #d0d6f9;
+  line-height: 19px;
+  letter-spacing: 0.2rem;
+}
+.app__home__head {
+  text-transform: uppercase;
+  color: white;
+  font-size: 5.5rem;
+  font-weight: 500;
+  font-family: "Bellefair", serif;
+}
+.app__home__info {
+  color: #d0d6f9;
+  font-weight: 200;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+.app__home__btn-cont {
+  margin-top: 3rem;
+}
+.app__home__btn {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  text-transform: uppercase;
+  font-family: "Bellefair", serif;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.app__home__btn:hover {
+  -webkit-box-shadow: 0 0 0 30px hsla(217deg, 16%, 45%, 0.3);
+  box-shadow: 0 0 0 30px hsla(217deg, 16%, 45%, 0.3);
+}
+
+@media (min-width: 767px) {
+  .app__home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 600px;
+  }
+  .app__home__bg {
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
+  .app__home__introduction {
+    font-size: 2rem;
+  }
+  .app__home__head {
+    font-size: 10rem;
+  }
+  .app__home__info {
+    width: 64%;
+    margin: 0 auto;
+  }
+  .app__home__btn {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media (min-width: 1150px) {
+  .app__home {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+  .app__home__bg {
+    background-image: url("../assets/home/background-home-desktop.jpg");
+  }
+  .app__home__container {
+    text-align: left;
+    width: 400px;
+  }
+  .app__home__info {
+    width: auto;
+  }
+}
+@media (min-width: 1650px) {
+  .app__home {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 800;
+  }
+}
+.app__destination {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: white;
+  padding: 0 1.5rem;
+}
+.app__destination__bg {
+  position: fixed;
+  min-height: 100vh;
+  inset: 0;
+  background-image: url("../assets/destination/background-destination-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.app__destination__planet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.app__destination__planet-text {
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+.app__destination__planet-text span {
+  font-weight: 700;
+  opacity: 0.2;
+  margin-right: 0.5rem;
+}
+.app__destination__planet img {
+  width: 170px;
+  height: 170px;
+}
+.app__destination__img {
+  margin-top: 2rem;
+}
+.app__destination__info {
+  margin-top: 1.6rem;
+}
+.app__destination__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.app__destination__list li {
+  color: #d0d6f9;
+  text-transform: uppercase;
+  margin: 0 0.7rem;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+.app__destination__list .activeplanet {
+  border-bottom: 2px solid white;
+}
+.app__destination__head {
+  font-size: 4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Bellefair", serif;
+}
+.app__destination__text {
+  color: #d0d6f9;
+  font-weight: 100;
+  font-size: 1.1rem;
+  padding-bottom: 2rem;
+  width: 85%;
+  margin: 0 auto;
+}
+.app__destination hr {
+  width: 90%;
+  opacity: 0.1;
+  margin: 0 auto;
+}
+.app__destination__travel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+.app__destination__distance,
+.app__destination__time {
+  text-transform: uppercase;
+  color: white;
+}
+.app__destination__distance-text,
+.app__destination__time-text {
+  color: #d0d6f9;
+  letter-spacing: 0.2rem;
+}
+.app__destination__distance-duration,
+.app__destination__time-duration {
+  font-family: "Bellefair", serif;
+  font-size: 2rem;
+}
+
+@media (min-width: 767px) {
+  .app__destination__bg {
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
+  }
+  .app__destination__planet {
+    margin-top: 2.5rem;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .app__destination__text-cont {
+    text-align: left;
+  }
+  .app__destination__img {
+    margin: 0 auto;
+    margin-top: 1.5rem;
+  }
+  .app__destination__img img {
+    width: 300px;
+    height: 300px;
+  }
+  .app__destination__list {
+    font-size: 1.1rem;
+  }
+  .app__destination__list li {
+    letter-spacing: 0.4rem;
+  }
+  .app__destination__head {
+    font-size: 5rem;
+  }
+  .app__destination__text {
+    font-size: 1.4rem;
+  }
+  .app__destination__travel {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 1150px) {
+  .app__destination {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    max-width: 1440px;
+    height: 700px;
+  }
+  .app__destination__list li:first-child {
+    margin-left: 0;
+  }
+  .app__destination__bg {
+    background-image: url("../assets/destination/background-destination-desktop.jpg");
+  }
+  .app__destination__planet {
+    margin-top: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 4rem;
+  }
+  .app__destination__text-cont {
+    width: 70%;
+    font-size: 2rem;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .app__destination__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-top: 4rem;
+    width: 1000px;
+  }
+  .app__destination__img {
+    margin: 0;
+  }
+  .app__destination__img img {
+    width: 445px;
+    height: 445px;
+  }
+  .app__destination__head {
+    font-size: 8rem;
+  }
+  .app__destination__text {
+    text-align: left;
+    margin: 0;
+    width: 70%;
+  }
+  .app__destination hr {
+    width: 70%;
+    margin: 0;
+  }
+  .app__destination__travel {
+    text-align: left;
+    gap: 4rem;
+  }
+}
+@media (min-width: 1900px) {
+  .app__destination {
+    margin: 0 auto;
+  }
+  .app__destination__img img {
+    width: 500px;
+    height: 500px;
+  }
+}
+.app__crew {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: white;
+  padding: 0 1.5rem;
+}
+.app__crew__bg {
+  position: fixed;
+  min-height: 100vh;
+  inset: 0;
+  background-image: url("../assets/crew/background-crew-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.app__crew__cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.app__crew__head {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+.app__crew__head span {
+  margin-right: 0.5rem;
+  font-weight: 700;
+  opacity: 0.2;
+}
+.app__crew__meet {
+  width: 100%;
+  margin-top: 2rem;
+}
+.app__crew__meet img {
+  margin: 0 auto;
+  width: 177.12px;
+}
+.app__crew__meet hr {
+  width: 90%;
+  margin: 0 auto;
+  opacity: 0.1;
+}
+.app__crew__info,
+.app__crew__id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.app__crew__dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.app__crew__dots .dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 0.5rem;
+  background-color: white;
+  opacity: 0.5;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.app__crew__dots .activedot {
+  opacity: 1;
+}
+.app__crew__person {
+  margin-top: 2rem;
+}
+.app__crew__rank {
+  text-transform: uppercase;
+  font-family: "Bellefair";
+  opacity: 0.5;
+}
+.app__crew__name {
+  text-transform: uppercase;
+  font-family: "Bellefair";
+  font-size: 1.5rem;
+}
+.app__crew__text {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #d0d6f9;
+}
+
+@media (min-width: 767px) {
+  .app__crew__bg {
+    background-image: url("../assets/crew/background-crew-tablet.jpg");
+  }
+  .app__crew__head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .app__crew__cont,
+  .app__crew__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  .app__crew__rank {
+    font-size: 1.5rem;
+  }
+  .app__crew__name {
+    font-size: 2.5rem;
+  }
+  .app__crew__text {
+    margin: 0 auto;
+    font-size: 1rem;
+    width: 50%;
+  }
+  .app__crew__dots {
+    margin-top: 3rem;
+  }
+  .app__crew__meet {
+    margin-top: 3rem;
+  }
+  .app__crew__meet img {
+    width: auto;
+  }
+}
+@media (min-width: 1150px) {
+  .app__crew {
+    height: calc(100vh - 152px);
+    max-height: 1000px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .app__crew__bg {
+    background-image: url("../assets/crew/background-crew-desktop.jpg");
+  }
+  .app__crew__cont {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    width: 1440px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 4rem;
+    position: relative;
+  }
+  .app__crew__head-cont {
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    width: 1440px;
+    padding: 0 4rem;
+  }
+  .app__crew__head {
+    font-size: 2rem;
+  }
+  .app__crew__rank {
+    font-size: 2rem;
+  }
+  .app__crew__name {
+    font-size: 2.5rem;
+  }
+  .app__crew__text {
+    font-weight: 300;
+    font-size: 1.5rem;
+    width: 90%;
+  }
+  .app__crew__info {
+    -webkit-box-flex: 0.4;
+    -ms-flex: 0.4;
+    flex: 0.4;
+  }
+  .app__crew__meet {
+    -webkit-box-flex: 0.4;
+    -ms-flex: 0.4;
+    flex: 0.4;
+    margin: 0;
+  }
+  .app__crew__meet img {
+    margin: 0;
+  }
+  .app__crew__meet hr {
+    display: none;
+  }
+  .app__crew__person {
+    text-align: left;
+    margin: 0;
+  }
+  .app__crew__text {
+    margin: 0;
+  }
+  .app__crew__dots {
+    margin-top: 7rem;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+.app__technology {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: white;
+}
+.app__technology__bg {
+  position: fixed;
+  min-height: 100vh;
+  inset: 0;
+  background-image: url("../assets/technology/background-technology-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.app__technology__head {
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.app__technology__head span {
+  color: rgb(100, 100, 100);
+  font-weight: 700;
+}
+.app__technology__image-cont {
+  width: 100%;
+  margin-top: 2rem;
+}
+.app__technology__image-cont img {
+  width: 100%;
+  height: auto;
+}
+.app__technology__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 1rem;
+  font-family: "Bellefair", serif;
+  margin: 2.1rem 0;
+}
+.app__technology__buttons .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+.app__technology .activebtn {
+  background-color: white;
+  font-weight: 600;
+  color: black;
+}
+.app__technology__termin {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  font-size: 1.1rem;
+  color: #d0d6f9;
+}
+.app__technology__proccess {
+  font-family: "Bellefair", serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.app__technology__text {
+  margin: 0 auto;
+  width: 90%;
+  font-weight: 200;
+  font-size: 1.2rem;
+  color: #d0d6f9;
+}
+
+@media (min-width: 767px) {
+  .app__technology__bg {
+    background-image: url("../assets/technology/background-technology-tablet.jpg");
+  }
+  .app__technology__head-cont {
+    padding-top: 2rem;
+  }
+  .app__technology__text {
+    width: 55%;
+  }
+}
+@media (min-width: 1150px) {
+  .app__technology {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    text-align: left;
+  }
+  .app__technology__bg {
+    background-image: url("../assets/technology/background-technology-desktop.jpg");
+  }
+  .app__technology__head {
+    font-size: 2rem;
+  }
+  .app__technology .button {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    font-size: 1.4rem;
+  }
+  .app__technology__cont,
+  .app__technology__head-cont {
+    padding-left: 5rem;
+  }
+  .app__technology__head-cont {
+    width: 1440px;
+    margin: 0 auto;
+  }
+  .app__technology__cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 0.5;
+    -ms-flex: 0.5;
+    flex: 0.5;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .app__technology__image-cont {
+    -webkit-box-flex: 0.3;
+    -ms-flex: 0.3;
+    flex: 0.3;
+  }
+  .app__technology__image-cont img {
+    width: 515px;
+    height: 527px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .app__technology__text-cont {
+    width: 500px;
+  }
+  .app__technology__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .app__technology__global-cont {
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 1440px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .app__technology__text {
+    width: 90%;
+    margin: 0;
+    font-size: 1.489rem;
+  }
+  .app__technology__proccess {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1650px) {
+  .app__technology {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .app__technology__image-cont img {
+    width: 566px;
+    height: 578px;
+  }
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+} /*# sourceMappingURL=styles.css.map */

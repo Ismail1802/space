@@ -1,0 +1,111 @@
+.app__home {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  &__bg {
+    position: fixed;
+    min-height: 100vh;
+    inset: 0;
+    background-image: url("../assets/home/background-home-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+  &__container {
+    width: 90%;
+  }
+  &__introduction {
+    text-transform: uppercase;
+    color: #d0d6f9;
+    line-height: 19px;
+    letter-spacing: 0.2rem;
+  }
+  &__head {
+    text-transform: uppercase;
+    color: white;
+    font-size: 5.5rem;
+    font-weight: 500;
+    font-family: $bellefair;
+  }
+  &__info {
+    color: #d0d6f9;
+    font-weight: 200;
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+  &__btn-cont {
+    margin-top: 3rem;
+  }
+  &__btn {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    text-transform: uppercase;
+    font-family: $bellefair;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      box-shadow: 0 0 0 30px hsl(217deg 16% 45% / 30%);
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .app__home {
+    &__bg {
+      background-image: url("../assets/home/background-home-tablet.jpg");
+    }
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 600px;
+    &__introduction {
+      font-size: 2rem;
+    }
+    &__head {
+      font-size: 10rem;
+    }
+    &__info {
+      width: 64%;
+      margin: 0 auto;
+    }
+    &__btn {
+      width: 250px;
+      height: 250px;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .app__home {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+    &__bg {
+      background-image: url("../assets/home/background-home-desktop.jpg");
+    }
+    // &__container,
+    // &__btn-cont {
+    //   flex: 1;
+    // }
+    &__container {
+      text-align: left;
+      width: 400px;
+    }
+    &__info {
+      width: auto;
+    }
+  }
+}
+
+@media (min-width: 1650px) {
+  .app__home {
+    justify-content: space-between;
+    height: 800;
+  }
+}

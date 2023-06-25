@@ -1,0 +1,171 @@
+.app__technology {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  &__bg {
+    position: fixed;
+    min-height: 100vh;
+    inset: 0;
+    background-image: url("../assets/technology/background-technology-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+  &__head {
+    span {
+      color: rgb(100, 100, 100);
+      font-weight: 700;
+    }
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+  &__image-cont {
+    width: 100%;
+    margin-top: 2rem;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  // &__image-cont {
+  //   margin-top: 2rem;
+  //   img {
+  //     width: 375px;
+  //     height: 170px;
+  //   }
+  // }
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-family: $bellefair;
+    margin: 2.1rem 0;
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+    }
+  }
+  .activebtn {
+    background-color: white;
+    font-weight: 600;
+    color: black;
+  }
+  &__termin {
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    font-size: 1.1rem;
+    color: #d0d6f9;
+  }
+
+  &__proccess {
+    font-family: $bellefair;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  &__text {
+    margin: 0 auto;
+    width: 90%;
+    font-weight: 200;
+    font-size: 1.2rem;
+    color: #d0d6f9;
+  }
+}
+@media (min-width: 767px) {
+  .app__technology {
+    &__bg {
+      background-image: url("../assets/technology/background-technology-tablet.jpg");
+    }
+    &__head-cont {
+      padding-top: 2rem;
+    }
+
+    &__text {
+      width: 55%;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .app__technology {
+    &__bg {
+      background-image: url("../assets/technology/background-technology-desktop.jpg");
+    }
+    align-items: flex-end;
+    text-align: left;
+
+    &__head {
+      font-size: 2rem;
+    }
+    .button {
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      font-size: 1.4rem;
+    }
+    &__cont,
+    &__head-cont {
+      padding-left: 5rem;
+    }
+    &__head-cont {
+      width: 1440px;
+      margin: 0 auto;
+    }
+    &__cont {
+      display: flex;
+      align-items: center;
+      flex: 0.5;
+      justify-content: space-between;
+    }
+    &__image-cont {
+      flex: 0.3;
+      img {
+        width: 515px;
+        height: 527px;
+        object-fit: cover;
+      }
+    }
+    &__text-cont {
+      width: 500px;
+    }
+    &__buttons {
+      flex-direction: column;
+    }
+    &__global-cont {
+      margin: 0 auto;
+      max-width: 1440px;
+      width: 1440px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+    &__text {
+      width: 90%;
+      margin: 0;
+      font-size: 1.489rem;
+    }
+    &__proccess {
+      font-size: 3.5rem;
+    }
+  }
+}
+@media (min-width: 1650px) {
+  .app__technology {
+    align-items: flex-start;
+    &__image-cont {
+      img {
+        width: 566px;
+        height: 578px;
+      }
+    }
+  }
+}
